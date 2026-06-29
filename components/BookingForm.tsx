@@ -22,6 +22,7 @@ const labelCls = 'block text-xs font-bold text-gray-500 uppercase tracking-wider
 export default function BookingForm() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -41,9 +42,40 @@ export default function BookingForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    await new Promise((r) => setTimeout(r, 1000))
-    setLoading(false)
-    setSubmitted(true)
+    setError('')
+
+    try {
+      const res = await fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data.error || 'Something went wrong. Please try again or call us.')
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again or call us.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const resetForm = () => {
+    setSubmitted(false)
+    setError('')
+    setForm({
+      name: '',
+      phone: '',
+      email: '',
+      service: '',
+      propertyType: 'residential',
+      preferredDate: '',
+      message: '',
+    })
   }
 
   if (submitted) {
@@ -65,7 +97,7 @@ export default function BookingForm() {
             Call (437) 432-3595
           </a>
         </p>
-        <button onClick={() => setSubmitted(false)} className="mt-5 text-xs text-brand-blue underline opacity-60 hover:opacity-100">
+        <button onClick={resetForm} className="mt-5 text-xs text-brand-blue underline opacity-60 hover:opacity-100">
           Submit another request
         </button>
       </div>
@@ -184,6 +216,11 @@ export default function BookingForm() {
       </div>
 
       {/* Submit */}
+      {error && (
+        <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+          {error}
+        </div>
+      )}
       <button type="submit" disabled={loading}
         className="w-full bg-brand-orange hover:bg-brand-orange-dark disabled:opacity-60 text-white font-bold py-3.5 rounded-xl text-sm tracking-wide transition-all duration-150 flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
         {loading ? (
