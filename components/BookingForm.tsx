@@ -27,6 +27,7 @@ export default function BookingForm() {
     name: '',
     phone: '',
     email: '',
+    address: '',
     service: '',
     propertyType: 'residential',
     preferredDate: '',
@@ -71,6 +72,7 @@ export default function BookingForm() {
       name: '',
       phone: '',
       email: '',
+      address: '',
       service: '',
       propertyType: 'residential',
       preferredDate: '',
@@ -155,7 +157,25 @@ export default function BookingForm() {
         </div>
       </div>
 
-      {/* Row 3: Service + Property Type */}
+      {/* Row 3: Service Address */}
+      <div>
+        <label className={labelCls}>
+          Service Address <span className="text-brand-orange normal-case tracking-normal">*</span>
+        </label>
+        <div className="relative">
+          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </span>
+          <input type="text" name="address" required value={form.address} onChange={handleChange}
+            placeholder="123 Main St, Toronto, ON M1A 1A1"
+            className={`${inputCls} pl-9`} />
+        </div>
+      </div>
+
+      {/* Row 4: Service + Property Type */}
       <div className="grid grid-cols-2 gap-3">
         <div>
           <label className={labelCls}>
@@ -192,7 +212,7 @@ export default function BookingForm() {
         </div>
       </div>
 
-      {/* Row 4: Preferred Date */}
+      {/* Row 5: Preferred Date */}
       <div>
         <label className={labelCls}>Preferred Date</label>
         <div className="relative">
@@ -207,7 +227,7 @@ export default function BookingForm() {
         </div>
       </div>
 
-      {/* Row 5: Message */}
+      {/* Row 6: Message */}
       <div>
         <label className={labelCls}>Describe the Issue <span className="normal-case tracking-normal font-normal text-gray-400">(optional)</span></label>
         <textarea name="message" rows={3} value={form.message} onChange={handleChange}

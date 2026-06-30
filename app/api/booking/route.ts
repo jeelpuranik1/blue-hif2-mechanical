@@ -5,6 +5,7 @@ type BookingPayload = {
   name: string
   phone: string
   email?: string
+  address: string
   service: string
   propertyType: string
   preferredDate?: string
@@ -37,10 +38,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 })
   }
 
-  const { name, phone, email, service, propertyType, preferredDate, message } = body
+  const { name, phone, email, address, service, propertyType, preferredDate, message } = body
 
-  if (!name?.trim() || !phone?.trim() || !service?.trim()) {
-    return NextResponse.json({ error: 'Name, phone, and service are required.' }, { status: 400 })
+  if (!name?.trim() || !phone?.trim() || !address?.trim() || !service?.trim()) {
+    return NextResponse.json({ error: 'Name, phone, address, and service are required.' }, { status: 400 })
   }
 
   const toEmail = process.env.BOOKING_NOTIFICATION_EMAIL ?? 'ibsa@bluehif2mechanical.com'
@@ -58,6 +59,7 @@ export async function POST(request: Request) {
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Phone:</strong> ${phone}</p>
       <p><strong>Email:</strong> ${email?.trim() || 'Not provided'}</p>
+      <p><strong>Service Address:</strong> ${address}</p>
       <p><strong>Service:</strong> ${service}</p>
       <p><strong>Property Type:</strong> ${formatPropertyType(propertyType)}</p>
       <p><strong>Preferred Date:</strong> ${formatDate(preferredDate)}</p>
