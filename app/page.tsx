@@ -117,8 +117,8 @@ export default function HomePage() {
                   </svg>
                   <div>
                     <div className="text-white/70 text-xs mb-0.5">Prefer to call? We&apos;re available 24/7</div>
-                    <a href="tel:4374323595" className="text-white font-bold text-lg hover:text-brand-orange transition-colors">
-                      (437) 432-3595
+                    <a href="tel:4374323594" className="text-white font-bold text-lg hover:text-brand-orange transition-colors">
+                      (437) 432-3594
                     </a>
                   </div>
                 </div>

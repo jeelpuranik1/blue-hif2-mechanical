@@ -8,7 +8,7 @@ import type React from 'react'
 export const metadata: Metadata = {
   title: '24/7 Emergency HVAC Service',
   description:
-    'Blue HIF₂ Mechanical provides 24/7 emergency HVAC service. No heat? AC failed? We respond fast — call (437) 432-3595 any time, day or night.',
+    'Blue HIF₂ Mechanical provides 24/7 emergency HVAC service. No heat? AC failed? We respond fast — call (437) 432-3594 any time, day or night.',
 }
 
 export default function EmergencyServicePage() {
@@ -32,13 +32,13 @@ export default function EmergencyServicePage() {
               and get your system back up — any time of day or night.
             </p>
             <Link
-              href="tel:4374323595"
+              href="tel:4374323594"
               className="bg-white text-brand-orange font-bold text-2xl px-12 py-5 rounded-xl inline-flex items-center gap-3 hover:bg-white/90 transition-colors shadow-xl"
             >
               <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
-              (437) 432-3595
+              (437) 432-3594
             </Link>
           </div>
         </section>
@@ -127,10 +127,10 @@ export default function EmergencyServicePage() {
                   <div className="text-brand-blue font-bold">Emergency Service</div>
                   <div className="text-gray-500 text-sm mt-1">365 days a year</div>
                   <Link
-                    href="tel:4374323595"
+                    href="tel:4374323594"
                     className="mt-5 block bg-brand-orange text-white font-bold py-3 px-6 rounded-lg hover:bg-brand-orange-dark transition-colors"
                   >
-                    Call Now: (437) 432-3595
+                    Call Now: (437) 432-3594
                   </Link>
                 </div>
               </div>

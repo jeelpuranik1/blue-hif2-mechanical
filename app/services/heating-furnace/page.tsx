@@ -47,10 +47,10 @@ export default function HeatingPage() {
                     Book Heating Service
                   </Link>
                   <Link
-                    href="tel:4374323595"
+                    href="tel:4374323594"
                     className="border-2 border-white/40 hover:border-white text-white font-bold px-8 py-4 rounded-md transition-colors text-center"
                   >
-                    Emergency: (437) 432-3595
+                    Emergency: (437) 432-3594
                   </Link>
                 </div>
               </div>
@@ -96,10 +96,10 @@ export default function HeatingPage() {
               A heating emergency in winter is urgent. Our technicians are on call around the clock.
             </p>
             <Link
-              href="tel:4374323595"
+              href="tel:4374323594"
               className="bg-white text-brand-orange font-bold px-12 py-4 rounded-md inline-block hover:bg-white/90 transition-colors text-lg"
             >
-              Call (437) 432-3595
+              Call (437) 432-3594
             </Link>
           </div>
         </section>

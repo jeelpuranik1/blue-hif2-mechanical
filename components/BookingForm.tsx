@@ -95,8 +95,8 @@ export default function BookingForm() {
         </p>
         <p className="text-xs text-gray-400 mt-4">
           Urgent?{' '}
-          <a href="tel:4374323595" className="text-brand-orange font-semibold hover:underline">
-            Call (437) 432-3595
+          <a href="tel:4374323594" className="text-brand-orange font-semibold hover:underline">
+            Call (437) 432-3594
           </a>
         </p>
         <button onClick={resetForm} className="mt-5 text-xs text-brand-blue underline opacity-60 hover:opacity-100">
@@ -136,7 +136,7 @@ export default function BookingForm() {
               </svg>
             </span>
             <input type="tel" name="phone" required value={form.phone} onChange={handleChange}
-              placeholder="(437) 432-3595"
+              placeholder="(437) 432-3594"
               className={`${inputCls} pl-9`} />
           </div>
         </div>
@@ -263,8 +263,8 @@ export default function BookingForm() {
 
       <p className="text-center text-xs text-gray-400">
         For emergencies call{' '}
-        <a href="tel:4374323595" className="text-brand-orange font-semibold hover:underline">
-          (437) 432-3595
+        <a href="tel:4374323594" className="text-brand-orange font-semibold hover:underline">
+          (437) 432-3594
         </a>{' '}
         — available 24/7
       </p>

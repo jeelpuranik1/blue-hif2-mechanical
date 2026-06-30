@@ -7,7 +7,7 @@ import BookingForm from '@/components/BookingForm'
 export const metadata: Metadata = {
   title: 'Contact & Book a Service',
   description:
-    'Contact Blue HIF₂ Mechanical Inc. to book HVAC service, get a free quote, or request emergency assistance. Call (437) 432-3595 — available 24/7.',
+    'Contact Blue HIF₂ Mechanical Inc. to book HVAC service, get a free quote, or request emergency assistance. Call (437) 432-3594 — available 24/7.',
 }
 
 const contactInfo = [
@@ -18,8 +18,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Phone',
-    value: '(437) 432-3595',
-    href: 'tel:4374323595',
+    value: '(437) 432-3594',
+    href: 'tel:4374323594',
     note: '24/7 emergency line',
   },
   {
@@ -129,10 +129,10 @@ export default function ContactPage() {
                     No heat in winter? AC out in summer? Our emergency team responds fast.
                   </p>
                   <a
-                    href="tel:4374323595"
+                    href="tel:4374323594"
                     className="block bg-white text-brand-orange font-bold text-center py-3 rounded-lg hover:bg-white/90 transition-colors"
                   >
-                    (437) 432-3595
+                    (437) 432-3594
                   </a>
                 </div>
               </div>

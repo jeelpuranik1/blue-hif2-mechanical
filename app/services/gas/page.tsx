@@ -34,7 +34,7 @@ export default function GasServicesPage() {
                 Book Gas Service
               </Link>
               <Link
-                href="tel:4374323595"
+                href="tel:4374323594"
                 className="border-2 border-white/40 hover:border-white text-white font-bold px-8 py-4 rounded-md transition-colors text-center"
               >
                 Emergency Line
@@ -74,10 +74,10 @@ export default function GasServicesPage() {
                 switches, call 911 and your gas utility, then call us.
               </p>
               <Link
-                href="tel:4374323595"
+                href="tel:4374323594"
                 className="bg-red-600 text-white font-bold px-8 py-3 rounded-lg inline-block hover:bg-red-700 transition-colors"
               >
-                Emergency: (437) 432-3595
+                Emergency: (437) 432-3594
               </Link>
             </div>
           </div>

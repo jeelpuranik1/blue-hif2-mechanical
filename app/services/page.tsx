@@ -97,10 +97,10 @@ export default function ServicesPage() {
                 Book a Service
               </Link>
               <Link
-                href="tel:4374323595"
+                href="tel:4374323594"
                 className="border-2 border-white/40 hover:border-white text-white font-bold px-10 py-4 rounded-md transition-colors"
               >
-                Call (437) 432-3595
+                Call (437) 432-3594
               </Link>
             </div>
           </div>

@@ -67,7 +67,7 @@ export default function ACRepairPage() {
                     Book AC Service
                   </Link>
                   <Link
-                    href="tel:4374323595"
+                    href="tel:4374323594"
                     className="border-2 border-white/40 hover:border-white text-white font-bold px-8 py-4 rounded-md transition-colors text-center"
                   >
                     Call for Emergency

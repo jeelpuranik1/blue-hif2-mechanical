@@ -3,7 +3,7 @@ import './globals.css'
 
 const SITE_URL = 'https://bluehif2mechanical.com'
 const COMPANY = 'Blue HIF₂ Mechanical Inc.'
-const PHONE = '(437) 432-3595'
+const PHONE = '(437) 432-3594'
 const CITY = 'Toronto, ON'
 
 export const metadata: Metadata = {
