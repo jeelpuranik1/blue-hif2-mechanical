@@ -30,8 +30,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Email',
-    value: 'ibsa@bluehif2mechanical.com',
-    href: 'mailto:ibsa@bluehif2mechanical.com',
+    value: 'info@bluehif2mechanical.com',
+    href: 'mailto:info@bluehif2mechanical.com',
     note: 'We respond within 2 hours',
   },
   {

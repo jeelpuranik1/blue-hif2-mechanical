@@ -44,7 +44,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Name, phone, address, and service are required.' }, { status: 400 })
   }
 
-  const toEmail = process.env.BOOKING_NOTIFICATION_EMAIL ?? 'ibsa@bluehif2mechanical.com'
+  const toEmail = process.env.BOOKING_NOTIFICATION_EMAIL ?? 'info@bluehif2mechanical.com'
   const fromEmail =
     process.env.RESEND_FROM_EMAIL ?? 'Blue HIF₂ Mechanical <onboarding@resend.dev>'
 
